@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ms-MY">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Sahaja - JomMeet Malaysia</title>
+    <!-- 引入外部资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF7F50', // 珊瑚橙 - 马来西亚特色暖色调
+                        secondary: '#1E3A8A', // 深蓝色 - 信任
+                        accent: '#F59E0B', // 金色
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6;
+        }
+        .profile-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="py-10 px-4">
+    <!-- 页面标题 -->
+    <div class="text-center mb-8">
+        <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary">
+            <span class="text-primary">JomMeet</span> - Profil Ahli
+        </h1>
+        <p class="text-gray-600 mt-2">Temui rakan serasi di Malaysia</p>
+    </div>
+
+    <!-- 核心：女性个人资料卡片 -->
+    <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden profile-card">
+            <!-- 头像区域 -->
+            <div class="relative">
+                <!-- 封面图 -->
+                <div class="h-48 bg-gradient-to-r from-primary to-secondary"></div>
+                <!-- 本地头像（修改后的核心部分） -->
+                <div class="absolute left-8 bottom-[-50px] w-32 h-32 rounded-full border-4 border-white overflow-hidden">
+                    <img src="WhatsApp Image 2026-03-04 at 5.31.29 PM.jpeg" 
+                         alt="Profil Siti" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://picsum.photos/id/64/200/200'">
+                </div>
+            </div>
+
+            <!-- 个人信息 -->
+            <div class="px-8 pt-20 pb-8">
+                <!-- 基本信息 -->
+                <div class="flex justify-between items-start mb-6 flex-wrap gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Siti Aishah</h2>
+                        <div class="flex items-center mt-1 text-gray-600 flex-wrap gap-2">
+                            <span class="flex items-center"><i class="fa fa-birthday-cake mr-1"></i> 28 Tahun</span>
+                            <span class="mx-3">•</span>
+                            <span class="flex items-center"><i class="fa fa-map-marker mr-1"></i> Kuala Lumpur</span>
+                        </div>
+                    </div>
+                    <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium transition-colors">
+                        Hubungi Saya <i class="fa fa-paper-plane ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- 个人简介 -->
+                <div class="border-t border-gray-100 pt-6">
+                    <h3 class="font-bold text-lg mb-3 text-gray-800">Tentang Saya</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Saya seorang guru prasekolah yang tinggal di KL, suka memasak kuih-muih tradisional Malaysia,
+                        mendengar lagu Melayu tradisional, dan menjelajah tempat-tempat bersejarah di Malaysia. 
+                        Saya mencari teman atau pasangan yang hormat budaya, suka keluarga, dan ingin membina hubungan yang serius.
+                        Saya gemar berjalan-jalan di taman, mencuba makanan dari pelbagai kaum, dan menghabiskan masa dengan keluarga.
+                    </p>
+
+                    <!-- 兴趣标签 -->
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-3 text-gray-800">Minat</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Memasak</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Menari Zapin</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Berkebun</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Membaca</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Perjalanan</span>
+                        </div>
+                    </div>
+
+                    <!-- 期望匹配 -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-3 text-gray-800">Apa yang Saya Cari</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Orang yang berumur 28-35 tahun, stabil dalam kerjaya, hormat kepada ibu bapa, 
+                            dan suka hidup yang tenang. Tidak semestinya sama agama, asalkan saling menghormati. 
+                            Saya harap dapat menemui seseorang yang ingin membina keluarga dan hidup bahagia bersama.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="mt-16 text-center text-gray-500 text-sm">
+        <p>&copy; 2024 JomMeet Malaysia. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- 简单交互脚本 -->
+    <script>
+        // 按钮点击提示
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Permintaan untuk menghubungi Siti telah dihantar!');
+        });
+    </script>
+</body>
+</html>
